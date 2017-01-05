@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../public/javascripts/angular/angular.min.js"></script>
+    <script src="../public/javascripts/angular-route/angular-route.min.js"></script>
+    <script src="../public/javascripts/angular-animate/angular-animate.min.js"></script>
+    <script src="services.js"></script>
+    <script src="controllers.js"></script>
+    <link rel="stylesheet" href="../public/stylesheets/mui.min.css">
+    <script src="app.js"></script>
+    <style>
+        .mui-slider .mui-slider-group .mui-slider-item img {
+            height: 282px;
+        }
+        .body{
+            margin-top:44px;
+        }
+        .view-animate{
+            transition: opacity ease 1s;
+        }
+        .view-animate.ng-enter,.view-animate.ng-leave{
+            width:100%;
+            position:absolute;
+            opacity:0;
+        }
+        .view-animate.ng-enter{
+            opacity:0;
+        }
+        .view-animate,.ng-enter.ng-enter-active{
+            opacity:1;
+        }
+        .view-animate.ng-leave.ng-leave-active{
+            opacity:0;
+        }
+    </style>
+</head>
+<body ng-app="myapp">
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">首页</h1>
+</header>
+<div ng-view="" class="view-animate body">
+
+</div>
+
+
+
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item mui-active">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item">
+        <span class="mui-icon mui-icon-phone"></span>
+        <span class="mui-tab-label">电话</span>
+    </a>
+    <a class="mui-tab-item">
+        <span class="mui-icon mui-icon-email"></span>
+        <span class="mui-tab-label">邮件</span>
+    </a>
+    <a class="mui-tab-item">
+        <span class="mui-icon mui-icon-chatbubble"></span>
+        <span class="mui-tab-label">聊天</span>
+    </a>
+</nav>
+</body>
+</html>

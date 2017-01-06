@@ -4,3 +4,8 @@ angular.module("ctrls",["services"])
         $scope.data=data.data;
     });
 }])
+    .controller("show",["$scope","$http","indexDate",function($scope,$http,indexDate){
+        indexDate.then(function(data){
+            $scope.data=data.data;
+        });
+    }]);

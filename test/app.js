@@ -6,7 +6,8 @@ angular.module("myapp",["ngRoute","ngAnimate","ctrls","services"])
     }).when("/list/:id",{
         templateUrl:"list.html"
     }).when("/show/:id",{
-        templateUrl:"show.html"
+        templateUrl:"show.html",
+        controller:"show"
     }).otherwise("/")
 })
 //     .controller("list",function($scope,$routeParams){
